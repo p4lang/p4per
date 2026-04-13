@@ -1,0 +1,5 @@
+[project]
+site_name = "P4PER"
+site_description = "P4 Project Enhancement Request"
+site_url = "https://p4lang.github.io/p4per/"
+repo_url = "https://github.com/p4lang/p4per"

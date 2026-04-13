@@ -1,0 +1,9 @@
+{
+  "name": "P4PER",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  // Forward ports for Zensical local preview.
+  "forwardPorts": [8000],
+  "appPort": [8000]
+}
