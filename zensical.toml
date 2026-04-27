@@ -2,4 +2,18 @@
 site_name = "P4PER"
 site_description = "P4 Project Enhancement Request"
 site_url = "https://p4lang.github.io/p4per/"
+repo_name = "p4lang/p4per"
 repo_url = "https://github.com/p4lang/p4per"
+
+nav = [
+  "index.md",
+  "p4per-4.md",
+  "p4per-1234.md",
+]
+
+[project.markdown_extensions.admonition]
+
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
+]

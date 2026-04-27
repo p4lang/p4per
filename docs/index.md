@@ -12,4 +12,10 @@ title: P4PER
 
 | Number | Title | Author |
 |--------|-------|--------|
-| [1234](p4per-1234.md) | Temporary Experimental P4PER | Andy Fingerhut, Fabian Ruffy, Steffen Smolka, Bili Dong |
+| [4](p4per-4.md) | P4PER Purpose and Guidelines | Bili Dong ([@qobilidop]), Fabian Ruffy ([@fruffy]), Steffen Smolka ([@smolkaj]), Andy Fingerhut ([@jafingerhut]) |
+| [1234](p4per-1234.md) | Temporary Experimental P4PER | John Doe, Jane Doe |
+
+[@fruffy]: https://github.com/fruffy
+[@jafingerhut]: https://github.com/jafingerhut
+[@qobilidop]: https://github.com/qobilidop
+[@smolkaj]: https://github.com/smolkaj
