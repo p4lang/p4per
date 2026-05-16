@@ -1,7 +1,7 @@
 # pull_request_target lets this run in the base repo's context with write
 # permissions for fork PRs. Safe here because the job runs no PR code —
 # it only deletes a directory keyed by PR number.
-name: Preview cleanup
+name: Preview Cleanup
 
 on:
   pull_request_target:

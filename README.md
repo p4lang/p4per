@@ -1,6 +1,7 @@
 # P4PER
 
-[![publish](https://github.com/p4lang/p4per/actions/workflows/publish.yml/badge.svg)](https://github.com/p4lang/p4per/actions/workflows/publish.yml)
+[![Build](https://github.com/p4lang/p4per/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/p4lang/p4per/actions/workflows/build.yml)
+[![Deploy](https://github.com/p4lang/p4per/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/p4lang/p4per/actions/workflows/deploy.yml)
 
 The repository for P4 Project Enhancement Requests (P4PERs).
 
