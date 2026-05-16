@@ -17,14 +17,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build site
+      # PR number is saved in site/ so deploy.yml can read it.
+      # workflow_run payloads don't reliably carry it.
+      - name: Build site and save PR number
         uses: devcontainers/ci@v0.3
         with:
-          runCmd: zensical build --clean
-      # PR number is read by deploy.yml; workflow_run payloads don't reliably carry it.
-      - name: Save PR number
-        if: github.event_name == 'pull_request'
-        run: echo "${{ github.event.pull_request.number }}" > site/.pr_number
+          runCmd: |
+            zensical build --clean
+            pr="${{ github.event.pull_request.number }}"
+            [ -n "$pr" ] && echo "$pr" > site/.pr_number || true
       - name: Upload site artifact
         uses: actions/upload-artifact@v4
         with:
