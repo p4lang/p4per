@@ -29,14 +29,15 @@ jobs:
           path: site
           github-token: ${{ secrets.GITHUB_TOKEN }}
           run-id: ${{ github.event.workflow_run.id }}
+      # Strip _meta/ before deploy so build metadata never reaches the live site.
       - name: Read PR number
         id: meta
         run: |
-          if [ -f site/.pr_number ]; then
-            pr=$(cat site/.pr_number)
-            rm site/.pr_number
+          if [ -f site/_meta/pr_number.txt ]; then
+            pr=$(cat site/_meta/pr_number.txt)
             echo "pr=$pr" >> "$GITHUB_OUTPUT"
           fi
+          rm -rf site/_meta
       - name: Deploy to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
