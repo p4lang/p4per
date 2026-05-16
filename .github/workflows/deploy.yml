@@ -1,0 +1,54 @@
+# Triggered by Build via workflow_run so this runs in the base repo's context
+# with write permissions, even for PRs from forks.
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: [Build]
+    types: [completed]
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: read
+
+concurrency:
+  group: gh-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: site
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+      - name: Read PR number
+        id: meta
+        run: |
+          if [ -f site/.pr_number ]; then
+            pr=$(cat site/.pr_number)
+            rm site/.pr_number
+            echo "pr=$pr" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Deploy to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: site
+          branch: gh-pages
+          target-folder: ${{ steps.meta.outputs.pr && format('pr-preview/{0}', steps.meta.outputs.pr) || '' }}
+          clean: ${{ steps.meta.outputs.pr == '' }}
+          clean-exclude: pr-preview/
+      - name: Post or update PR comment
+        if: steps.meta.outputs.pr != ''
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          number: ${{ steps.meta.outputs.pr }}
+          message: |
+            Preview ready: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-preview/${{ steps.meta.outputs.pr }}/

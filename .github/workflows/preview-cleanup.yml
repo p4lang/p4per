@@ -1,0 +1,42 @@
+# pull_request_target lets this run in the base repo's context with write
+# permissions for fork PRs. Safe here because the job runs no PR code —
+# it only deletes a directory keyed by PR number.
+name: Preview cleanup
+
+on:
+  pull_request_target:
+    types: [closed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: gh-pages
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+      - name: Remove PR preview
+        run: |
+          pr_dir="pr-preview/${{ github.event.pull_request.number }}"
+          if [ -d "$pr_dir" ]; then
+            git rm -rf "$pr_dir"
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Remove preview for PR #${{ github.event.pull_request.number }}"
+            git push
+          else
+            echo "No preview directory to remove."
+          fi
+      - name: Update PR comment
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          number: ${{ github.event.pull_request.number }}
+          message: |
+            Preview removed.
