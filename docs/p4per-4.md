@@ -8,10 +8,10 @@ title: P4PER-4
 !!! info
 
     - **Author**:
-      Bili Dong ([@qobilidop]),
-      Fabian Ruffy ([@fruffy]),
-      Steffen Smolka ([@smolkaj]),
-      Andy Fingerhut ([@jafingerhut])
+        Bili Dong ([@qobilidop]),
+        Fabian Ruffy ([@fruffy]),
+        Steffen Smolka ([@smolkaj]),
+        Andy Fingerhut ([@jafingerhut])
     - **Tracking issue**: [p4lang/p4per#4](https://github.com/p4lang/p4per/issues/4)
     - **Created**: 2026-05-17
     - **Type**: Process
@@ -70,12 +70,12 @@ The following individuals are eligible editors and approvers:
 - **Accepted**: The P4PER is accepted with approver approval, but the implementation is not fully complete.
 - **Final**: The P4PER is accepted with approver approval, and the implementation is fully complete.
 - **Rejected**: The P4PER is rejected after approver's review.
-  - We want to keep rejected P4PERs as historical record.
+    - We want to keep rejected P4PERs as historical record.
 - **Withdrawn**: The P4PER author(s) have withdrawn the proposed P4PER.
-  - We want to keep withdrawn P4PERs as historical record.
-  - A withdrawn P4PER can be resurrected as a new P4PER (with a different P4PER number) later.
+    - We want to keep withdrawn P4PERs as historical record.
+    - A withdrawn P4PER can be resurrected as a new P4PER (with a different P4PER number) later.
 - **Active**: The P4PER is a continuously updated living document, and accepted with approver approval.
-  - An Active P4PER can transition to Final, if it's no longer expected to be a living document.
+    - An Active P4PER can transition to Final, if it's no longer expected to be a living document.
 
 Typical P4PER status progressions are illustrated below. In practice, it can be more flexible. For example, it's totally fine to submit a Final P4PER in a single PR. When in doubt, just [send the PR](#p4per-submission), and we'll sort things out in the review process.
 
@@ -92,18 +92,18 @@ flowchart LR
 ### P4PER submission
 
 1. **Create a tracking issue for the P4PER**
-   - The P4PER champion opens an issue in the [P4PER GitHub repo](https://github.com/p4lang/p4per).
-     - Example: https://github.com/p4lang/p4per/issues/4
-   - The issue number becomes the [P4PER number](#p4per-number).
-   - Request that an [editor](#p4per-roles) be assigned for this P4PER.
-   - Cross-link this issue with any related PRs or issues.
-   - General discussion about this P4PER can happen in this issue.
+    - The P4PER champion opens an issue in the [P4PER GitHub repo](https://github.com/p4lang/p4per).
+        - Example: https://github.com/p4lang/p4per/issues/4
+    - The issue number becomes the [P4PER number](#p4per-number).
+    - Request that an [editor](#p4per-roles) be assigned for this P4PER.
+    - Cross-link this issue with any related PRs or issues.
+    - General discussion about this P4PER can happen in this issue.
 2. **Create/update/implement the P4PER with PRs**
-   - The P4PER champion is responsible for creating PRs to create/update the P4PER, and follow through the review process to get the PRs merged.
-     - Example: https://github.com/p4lang/p4per/pull/7
-     - If the PR leaves the P4PER in Draft status, simply ask the editor to review this PR. A single editor's approval is sufficient for merging.
-     - If the PR moves the P4PER beyond Draft status, ask the editor to assign one or more [approvers](#p4per-roles) to review this PR. All approvers' approvals are required for merging.
-   - If this P4PER requires implementation, the P4PER authors are responsible for coordinating the implementation with PRs in the relevant project repos (e.g. [P4C](https://github.com/p4lang/p4c), [P4Runtime](https://github.com/p4lang/p4runtime)).
+    - The P4PER champion is responsible for creating PRs to create/update the P4PER, and follow through the review process to get the PRs merged.
+        - Example: https://github.com/p4lang/p4per/pull/7
+        - If the PR leaves the P4PER in Draft status, simply ask the editor to review this PR. A single editor's approval is sufficient for merging.
+        - If the PR moves the P4PER beyond Draft status, ask the editor to assign one or more [approvers](#p4per-roles) to review this PR. All approvers' approvals are required for merging.
+    - If this P4PER requires implementation, the P4PER authors are responsible for coordinating the implementation with PRs in the relevant project repos (e.g. [P4C](https://github.com/p4lang/p4c), [P4Runtime](https://github.com/p4lang/p4runtime)).
 
 ## History
 
