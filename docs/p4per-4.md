@@ -27,7 +27,7 @@ title: P4PER-4
 
 P4PER stands for P4 Project Enhancement Request. A P4PER is a design document providing information to the P4 community, or describing a new feature for P4 or its processes or environment. The P4PER should provide a concise technical specification of the feature and a rationale for the feature. The P4PER author is responsible for building consensus within the community and documenting dissenting opinions.
 
-For now, P4PER is opt-in rather than mandatory: use it when it helps with presentation, discussion, coordination, or record-keeping. We may revisit this once the community has more experience with the process.
+For now (as of May 2026), P4PER is opt-in rather than mandatory: use it when it helps with presentation, discussion, coordination, or record-keeping. We may revisit this once the community has more experience with the process.
 
 ## P4PER number
 
