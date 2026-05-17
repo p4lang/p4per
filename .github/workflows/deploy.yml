@@ -30,12 +30,16 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           run-id: ${{ github.event.workflow_run.id }}
       # Strip _meta/ before deploy so build metadata never reaches the live site.
-      - name: Read PR number
+      - name: Read PR metadata
         id: meta
         run: |
           if [ -f site/_meta/pr_number.txt ]; then
             pr=$(cat site/_meta/pr_number.txt)
             echo "pr=$pr" >> "$GITHUB_OUTPUT"
+          fi
+          if [ -f site/_meta/sha.txt ]; then
+            sha=$(cat site/_meta/sha.txt)
+            echo "sha=$sha" >> "$GITHUB_OUTPUT"
           fi
           rm -rf site/_meta
       - name: Deploy to gh-pages
@@ -53,3 +57,5 @@ jobs:
           number: ${{ steps.meta.outputs.pr }}
           message: |
             Preview ready: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-preview/${{ steps.meta.outputs.pr }}/
+
+            Built from https://github.com/${{ github.repository }}/pull/${{ steps.meta.outputs.pr }}/changes/${{ steps.meta.outputs.sha }}.
