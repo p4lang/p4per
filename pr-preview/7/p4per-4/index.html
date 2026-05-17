@@ -363,10 +363,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#p4per-lifecycle" class="md-nav__link">
+  <a href="#p4per-submission" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        P4PER lifecycle
+        P4PER submission
       </span>
     </span>
   </a>
@@ -542,10 +542,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#p4per-lifecycle" class="md-nav__link">
+  <a href="#p4per-submission" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        P4PER lifecycle
+        P4PER submission
       </span>
     </span>
   </a>
@@ -596,8 +596,8 @@
   Fabian Ruffy (<a href="https://github.com/fruffy">@fruffy</a>),
   Steffen Smolka (<a href="https://github.com/smolkaj">@smolkaj</a>),
   Andy Fingerhut (<a href="https://github.com/jafingerhut">@jafingerhut</a>)</li>
-<li><strong>Issue</strong>: <a href="https://github.com/p4lang/p4per/issues/4">p4lang/p4per#4</a></li>
-<li><strong>Created</strong>: 2026-04-27</li>
+<li><strong>Tracking issue</strong>: <a href="https://github.com/p4lang/p4per/issues/4">p4lang/p4per#4</a></li>
+<li><strong>Created</strong>: 2026-05-17</li>
 <li><strong>Type</strong>: Process</li>
 <li><strong>Status</strong>: Draft</li>
 </ul>
@@ -608,7 +608,7 @@
 <p>For now, P4PER is opt-in rather than mandatory: use it when it helps with presentation, discussion, coordination, or record-keeping. We may revisit this once the community has more experience with the process.</p>
 <h2 id="p4per-number">P4PER number</h2>
 <p>A P4PER is uniquely identified by a number. To refer to a P4PER, use the format P4PER-N where N is the P4PER number. For example, this P4PER is P4PER-4.</p>
-<p>To get a unique number for your P4PER, create an issue in the <a href="https://github.com/p4lang/p4per">P4PER GitHub repo</a>, and use that issue number as your P4PER number.</p>
+<p>For how to get the P4PER number, see the <a href="#p4per-submission">P4PER submission</a> section.</p>
 <h2 id="p4per-types">P4PER types</h2>
 <p>There are three types of P4PER:</p>
 <ol>
@@ -618,14 +618,14 @@
 </ol>
 <h2 id="p4per-workflow">P4PER workflow</h2>
 <h3 id="p4-technical-steering-team">P4 Technical Steering Team</h3>
-<p>The current members of the <a href="https://p4.org/governance/">P4 Technical Steering Team (TST)</a> are responsible for administering the P4PER process, including keeping this document up to date. For anything unclear in practice, reach out to the P4 TST as the final authorities.</p>
+<p>The current members of the <a href="https://p4.org/governance/">P4 Technical Steering Team (TST)</a> are responsible for administering the P4PER process, including keeping this document up to date. For anything unclear in practice, reach out to the P4 TST as the final authority.</p>
 <h3 id="p4per-roles">P4PER roles</h3>
 <p>The following roles are involved:</p>
 <ul>
-<li><strong>Author</strong>: One or more authors of this P4PER.</li>
-<li><strong>Champion</strong>: One of the authors, responsible for creating the P4PER PR and actively working with editors and approvers to get the PR merged. The P4PER PR creator becomes the P4PER champion (for that PR) automatically. P4PER champions could change between different PRs.</li>
-<li><strong>Editor</strong>: Eligible individuals responsible for managing the administrative and editorial (e.g. spelling, formatting, styling) aspects of the P4PER workflow. The editors don't pass judgement on whether a P4PER should be accepted or not. To keep things lightweight, the editor could be one of the authors.</li>
-<li><strong>Approver</strong>: Eligible individuals responsible for making the decision on whether a P4PER should be accepted or not. The approver has to be different from all the authors.</li>
+<li><strong>Author</strong>: One or more authors of the P4PER document.</li>
+<li><strong>Champion</strong>: One of the authors, responsible for coordinating all work related to a P4PER and getting them done. The creator of a <a href="#p4per-submission">P4PER tracking issue</a> becomes that P4PER's champion automatically.</li>
+<li><strong>Editor</strong>: Eligible individuals responsible for managing the administrative (e.g. identifying an appropriate approver) and editorial (e.g. spelling, formatting) aspects of the P4PER workflow. Editors don't pass judgement on whether a P4PER should be accepted. Editors can overlap with authors.</li>
+<li><strong>Approver</strong>: Eligible individuals responsible for making the decision on whether a P4PER should be accepted or not, on behalf of the P4 community. Approvers cannot overlap with authors, but can overlap with editors.</li>
 </ul>
 <p>The following individuals are eligible editors and approvers:</p>
 <ul>
@@ -634,6 +634,19 @@
 <li>Any other individuals appointed by P4 TST members or P4 WG chairs for a specific P4PER.</li>
 </ul>
 <h3 id="p4per-status">P4PER status</h3>
+<ul>
+<li><strong>Draft</strong>: The P4PER is committed to the repo for public review with an editor's approval, but is not yet accepted.</li>
+<li><strong>Accepted</strong>: The P4PER is accepted with approver approval, but the implementation is not fully complete.</li>
+<li><strong>Final</strong>: The P4PER is accepted with approver approval, and the implementation is fully complete.</li>
+<li><strong>Rejected</strong>: The P4PER is rejected after approver's review.</li>
+<li>We want to keep rejected P4PERs as historical record.</li>
+<li><strong>Withdrawn</strong>: The P4PER author(s) have withdrawn the proposed P4PER.</li>
+<li>We want to keep withdrawn P4PERs as historical record.</li>
+<li>A withdrawn P4PER can be resurrected as a new P4PER (with a different P4PER number) later.</li>
+<li><strong>Active</strong>: The P4PER is a continuously updated living document, and accepted with approver approval.</li>
+<li>An Active P4PER can transition to Final, if it's no longer expected to be a living document.</li>
+</ul>
+<p>Typical P4PER status progressions are illustrated below. In practice, it can be more flexible. For example, it's totally fine to submit a Final P4PER in a single PR. When in doubt, just <a href="#p4per-submission">send the PR</a>, and we'll sort things out in the review process.</p>
 <pre class="mermaid"><code>flowchart LR
     Draft --&gt; Accepted
     Accepted --&gt; Final
@@ -641,24 +654,26 @@
     Draft --&gt; Withdrawn
     Draft --&gt; Active
     Active -.-&gt; Final</code></pre>
-<ul>
-<li><strong>Draft</strong>: The P4PER is well-formatted and merged into the repo, but not yet approved.</li>
-<li><strong>Accepted</strong>: The P4PER is approved, but the implementation is not fully complete.</li>
-<li><strong>Final</strong>: The P4PER is approved, and the implementation is fully complete.</li>
-<li><strong>Rejected</strong>: The P4PER is rejected after approver's review.</li>
-<li><strong>Withdrawn</strong>: The P4PER author(s) have withdrawn the proposed P4PER. This status has finality and can no longer be resurrected using this P4PER number. If the idea is pursued at a later date, it is considered a new proposal.</li>
-<li><strong>Active</strong>: The P4PER is a continually updated living document, and it is approved. An active P4PER can also be turned into a final status if it's no longer expected to be a living document.</li>
-</ul>
-<h3 id="p4per-lifecycle">P4PER lifecycle</h3>
-<p>A P4PER goes through these stages:</p>
+<h3 id="p4per-submission">P4PER submission</h3>
 <ol>
-<li><strong>Reserve a number</strong>: The champion opens an issue in the <a href="https://github.com/p4lang/p4per">P4PER GitHub repo</a> and uses the issue number as the P4PER number.</li>
-<li><strong>Submit a draft</strong>: The champion opens a PR adding P4PER-N. An editor reviews and merges the PR as <strong>Draft</strong>.</li>
-<li><strong>Refine the draft</strong>: While in <strong>Draft</strong>, the champion iterates on the document via subsequent PRs in response to community feedback. Discussion typically happens in the tracking issue or PR comments. The champion is responsible for asking the editor (and optionally the approver) to review and merge the PRs. This may take many iterations and does not change the status.</li>
-<li><strong>Get a decision</strong>: Once the Draft is ready for a decision, the champion opens a PR updating the status field. The approver reviews and decides on <strong>Accepted</strong>, <strong>Active</strong>, or <strong>Rejected</strong>.</li>
-<li><strong>Mark complete</strong>: Once the accepted P4PER's implementation is complete, the champion opens a PR marking its status as <strong>Final</strong>. The approver reviews and merges the PR.</li>
+<li><strong>Create a tracking issue for the P4PER</strong></li>
+<li>The P4PER champion opens an issue in the <a href="https://github.com/p4lang/p4per">P4PER GitHub repo</a>.<ul>
+<li>Example: https://github.com/p4lang/p4per/issues/4</li>
+</ul>
+</li>
+<li>The issue number becomes the <a href="#p4per-number">P4PER number</a>.</li>
+<li>Request that an <a href="#p4per-roles">editor</a> be assigned for this P4PER.</li>
+<li>Cross-link this issue with any related PRs or issues.</li>
+<li>General discussion about this P4PER can happen in this issue.</li>
+<li><strong>Create/update/implement the P4PER with PRs</strong></li>
+<li>The P4PER champion is responsible for creating PRs to create/update the P4PER, and follow through the review process to get the PRs merged.<ul>
+<li>Example: https://github.com/p4lang/p4per/pull/7</li>
+<li>If the PR leaves the P4PER in Draft status, simply ask the editor to review this PR. A single editor's approval is sufficient for merging.</li>
+<li>If the PR moves the P4PER beyond Draft status, ask the editor to assign one or more <a href="#p4per-roles">approvers</a> to review this PR. All approvers' approvals are required for merging.</li>
+</ul>
+</li>
+<li>If this P4PER requires implementation, the P4PER authors are responsible for coordinating the implementation with PRs in the relevant project repos (e.g. <a href="https://github.com/p4lang/p4c">P4C</a>, <a href="https://github.com/p4lang/p4runtime">P4Runtime</a>).</li>
 </ol>
-<p>The champion may withdraw a Draft P4PER by opening a PR marking its status as <strong>Withdrawn</strong>. An editor reviews and merges the PR.</p>
 <h2 id="history">History</h2>
 <p>This document was derived heavily from <a href="https://peps.python.org/pep-0001/">Python's PEP 1</a> and <a href="https://eips.ethereum.org/EIPS/eip-1">Ethereum's EIP-1</a>. In many places text was simply copied and modified.</p>
 
