@@ -93,14 +93,14 @@ flowchart LR
 
 1. **Create a tracking issue for the P4PER**
     - The P4PER champion opens an issue in the [P4PER GitHub repo](https://github.com/p4lang/p4per).
-        - Example: https://github.com/p4lang/p4per/issues/4
+        - Example: <https://github.com/p4lang/p4per/issues/4>
     - The issue number becomes the [P4PER number](#p4per-number).
     - Request that an [editor](#p4per-roles) be assigned for this P4PER.
     - Cross-link this issue with any related PRs or issues.
     - General discussion about this P4PER can happen in this issue.
 2. **Create/update/implement the P4PER with PRs**
     - The P4PER champion is responsible for creating PRs to create/update the P4PER, and follow through the review process to get the PRs merged.
-        - Example: https://github.com/p4lang/p4per/pull/7
+        - Example: <https://github.com/p4lang/p4per/pull/7>
         - If the PR leaves the P4PER in Draft status, simply ask the editor to review this PR. A single editor's approval is sufficient for merging.
         - If the PR moves the P4PER beyond Draft status, ask the editor to assign one or more [approvers](#p4per-roles) to review this PR. All approvers' approvals are required for merging.
     - If this P4PER requires implementation, the P4PER authors are responsible for coordinating the implementation with PRs in the relevant project repos (e.g. [P4C](https://github.com/p4lang/p4c), [P4Runtime](https://github.com/p4lang/p4runtime)).
