@@ -592,10 +592,10 @@
 <p class="admonition-title">Info</p>
 <ul>
 <li><strong>Author</strong>:
-  Bili Dong (<a href="https://github.com/qobilidop">@qobilidop</a>),
-  Fabian Ruffy (<a href="https://github.com/fruffy">@fruffy</a>),
-  Steffen Smolka (<a href="https://github.com/smolkaj">@smolkaj</a>),
-  Andy Fingerhut (<a href="https://github.com/jafingerhut">@jafingerhut</a>)</li>
+    Bili Dong (<a href="https://github.com/qobilidop">@qobilidop</a>),
+    Fabian Ruffy (<a href="https://github.com/fruffy">@fruffy</a>),
+    Steffen Smolka (<a href="https://github.com/smolkaj">@smolkaj</a>),
+    Andy Fingerhut (<a href="https://github.com/jafingerhut">@jafingerhut</a>)</li>
 <li><strong>Tracking issue</strong>: <a href="https://github.com/p4lang/p4per/issues/4">p4lang/p4per#4</a></li>
 <li><strong>Created</strong>: 2026-05-17</li>
 <li><strong>Type</strong>: Process</li>
@@ -638,13 +638,19 @@
 <li><strong>Draft</strong>: The P4PER is committed to the repo for public review with an editor's approval, but is not yet accepted.</li>
 <li><strong>Accepted</strong>: The P4PER is accepted with approver approval, but the implementation is not fully complete.</li>
 <li><strong>Final</strong>: The P4PER is accepted with approver approval, and the implementation is fully complete.</li>
-<li><strong>Rejected</strong>: The P4PER is rejected after approver's review.</li>
+<li><strong>Rejected</strong>: The P4PER is rejected after approver's review.<ul>
 <li>We want to keep rejected P4PERs as historical record.</li>
-<li><strong>Withdrawn</strong>: The P4PER author(s) have withdrawn the proposed P4PER.</li>
+</ul>
+</li>
+<li><strong>Withdrawn</strong>: The P4PER author(s) have withdrawn the proposed P4PER.<ul>
 <li>We want to keep withdrawn P4PERs as historical record.</li>
 <li>A withdrawn P4PER can be resurrected as a new P4PER (with a different P4PER number) later.</li>
-<li><strong>Active</strong>: The P4PER is a continuously updated living document, and accepted with approver approval.</li>
+</ul>
+</li>
+<li><strong>Active</strong>: The P4PER is a continuously updated living document, and accepted with approver approval.<ul>
 <li>An Active P4PER can transition to Final, if it's no longer expected to be a living document.</li>
+</ul>
+</li>
 </ul>
 <p>Typical P4PER status progressions are illustrated below. In practice, it can be more flexible. For example, it's totally fine to submit a Final P4PER in a single PR. When in doubt, just <a href="#p4per-submission">send the PR</a>, and we'll sort things out in the review process.</p>
 <pre class="mermaid"><code>flowchart LR
@@ -656,7 +662,7 @@
     Active -.-&gt; Final</code></pre>
 <h3 id="p4per-submission">P4PER submission</h3>
 <ol>
-<li><strong>Create a tracking issue for the P4PER</strong></li>
+<li><strong>Create a tracking issue for the P4PER</strong><ul>
 <li>The P4PER champion opens an issue in the <a href="https://github.com/p4lang/p4per">P4PER GitHub repo</a>.<ul>
 <li>Example: https://github.com/p4lang/p4per/issues/4</li>
 </ul>
@@ -665,7 +671,9 @@
 <li>Request that an <a href="#p4per-roles">editor</a> be assigned for this P4PER.</li>
 <li>Cross-link this issue with any related PRs or issues.</li>
 <li>General discussion about this P4PER can happen in this issue.</li>
-<li><strong>Create/update/implement the P4PER with PRs</strong></li>
+</ul>
+</li>
+<li><strong>Create/update/implement the P4PER with PRs</strong><ul>
 <li>The P4PER champion is responsible for creating PRs to create/update the P4PER, and follow through the review process to get the PRs merged.<ul>
 <li>Example: https://github.com/p4lang/p4per/pull/7</li>
 <li>If the PR leaves the P4PER in Draft status, simply ask the editor to review this PR. A single editor's approval is sufficient for merging.</li>
@@ -673,6 +681,8 @@
 </ul>
 </li>
 <li>If this P4PER requires implementation, the P4PER authors are responsible for coordinating the implementation with PRs in the relevant project repos (e.g. <a href="https://github.com/p4lang/p4c">P4C</a>, <a href="https://github.com/p4lang/p4runtime">P4Runtime</a>).</li>
+</ul>
+</li>
 </ol>
 <h2 id="history">History</h2>
 <p>This document was derived heavily from <a href="https://peps.python.org/pep-0001/">Python's PEP 1</a> and <a href="https://eips.ethereum.org/EIPS/eip-1">Ethereum's EIP-1</a>. In many places text was simply copied and modified.</p>
