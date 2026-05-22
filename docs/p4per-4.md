@@ -1,8 +1,8 @@
 ---
-title: P4PER-4
+title: P4PER#4
 ---
 
-# P4PER-4: P4PER Purpose and Guidelines
+# P4PER#4 - P4PER Purpose and Guidelines
 
 ---
 !!! info
@@ -31,7 +31,7 @@ For now (as of May 2026), P4PER is opt-in rather than mandatory: use it when it 
 
 ## P4PER number
 
-A P4PER is uniquely identified by a number. To refer to a P4PER, use the format P4PER-N where N is the P4PER number. For example, this P4PER is P4PER-4.
+A P4PER is uniquely identified by a number. To refer to a P4PER, use the format P4PER#N where N is the P4PER number. For example, this P4PER is P4PER#4.
 
 For how to get the P4PER number, see the [P4PER submission](#p4per-submission) section.
 
