@@ -2,11 +2,11 @@
 title: P4PER
 ---
 
-# P4 Project Enhancement Requests (P4PERs)
+# P4 Project Enhancement Request (P4PER)
 
 !!! warning
 
-    We are still experimenting with P4PER setup. No P4PER is considered officially published yet.
+    We are still experimenting with the P4PER process. No P4PER is considered officially published yet.
 
 ## P4PER index
 

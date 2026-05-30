@@ -12,10 +12,11 @@ title: P4PER#4
         Fabian Ruffy ([@fruffy]),
         Steffen Smolka ([@smolkaj]),
         Andy Fingerhut ([@jafingerhut])
-    - **Tracking issue**: [p4lang/p4per#4](https://github.com/p4lang/p4per/issues/4)
-    - **Created**: 2026-05-17
+    - **Tracking issue**: [p4lang/p4per#4](https://github.com/p4lang/p4per/issues/4) (2026-04-12)
     - **Type**: Process
     - **Status**: Draft
+    - **Changelog**
+        - [p4lang/p4per#7](https://github.com/p4lang/p4per/pull/7) (2026-05-30) - First draft.
 ---
 
 [@fruffy]: https://github.com/fruffy
@@ -105,6 +106,15 @@ flowchart LR
         - If the PR moves the P4PER beyond Draft status, ask the editor to assign one or more [approvers](#p4per-roles) to review this PR. All approvers' approvals are required for merging.
     - If this P4PER requires implementation, the P4PER authors are responsible for coordinating the implementation with PRs in the relevant project repos (e.g. [P4C](https://github.com/p4lang/p4c), [P4Runtime](https://github.com/p4lang/p4runtime)).
 
-## History
+## Prior art
 
-This document was derived heavily from [Python's PEP 1](https://peps.python.org/pep-0001/) and [Ethereum's EIP-1](https://eips.ethereum.org/EIPS/eip-1). In many places text was simply copied and modified.
+The P4PER process was directly inspired by [Python Enhancement Proposals (PEPs)](https://peps.python.org/). The writing of this document drew heavily from the following meta documents that play the same role in their respective communities:
+
+- [Python's PEP 1](https://peps.python.org/pep-0001/)
+- [Ethereum's EIP-1](https://eips.ethereum.org/EIPS/eip-1)
+
+See also other community proposal processes that readers may find useful as additional prior art:
+
+- [IETF RFCs](https://www.rfc-editor.org/)
+- [Rust RFCs](https://github.com/rust-lang/rfcs)
+- [Kubernetes KEPs](https://github.com/kubernetes/enhancements)
