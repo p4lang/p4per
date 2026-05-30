@@ -296,6 +296,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#p4per-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        P4PER types
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#p4per-number" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -307,10 +318,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#p4per-types" class="md-nav__link">
+  <a href="#p4per-governance" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        P4PER types
+        P4PER governance
       </span>
     </span>
   </a>
@@ -328,17 +339,6 @@
   
     <nav class="md-nav" aria-label="P4PER workflow">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#p4-technical-steering-team" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        P4 Technical Steering Team
-      </span>
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#p4per-roles" class="md-nav__link">
@@ -363,10 +363,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#p4per-submission" class="md-nav__link">
+  <a href="#p4per-lifecycle" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        P4PER submission
+        P4PER lifecycle
       </span>
     </span>
   </a>
@@ -475,6 +475,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#p4per-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        P4PER types
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#p4per-number" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -486,10 +497,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#p4per-types" class="md-nav__link">
+  <a href="#p4per-governance" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        P4PER types
+        P4PER governance
       </span>
     </span>
   </a>
@@ -507,17 +518,6 @@
   
     <nav class="md-nav" aria-label="P4PER workflow">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#p4-technical-steering-team" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        P4 Technical Steering Team
-      </span>
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#p4per-roles" class="md-nav__link">
@@ -542,10 +542,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#p4per-submission" class="md-nav__link">
+  <a href="#p4per-lifecycle" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        P4PER submission
+        P4PER lifecycle
       </span>
     </span>
   </a>
@@ -596,11 +596,11 @@
     Fabian Ruffy (<a href="https://github.com/fruffy">@fruffy</a>),
     Steffen Smolka (<a href="https://github.com/smolkaj">@smolkaj</a>),
     Andy Fingerhut (<a href="https://github.com/jafingerhut">@jafingerhut</a>)</li>
-<li><strong>Tracking issue</strong>: <a href="https://github.com/p4lang/p4per/issues/4">p4lang/p4per#4</a> (2026-04-12)</li>
+<li><strong>Tracking issue</strong>: <a href="https://github.com/p4lang/p4per/issues/4">p4lang/p4per#4</a> (created 2026-04-12)</li>
 <li><strong>Type</strong>: Process</li>
 <li><strong>Status</strong>: Draft</li>
 <li><strong>Changelog</strong><ul>
-<li><a href="https://github.com/p4lang/p4per/pull/7">p4lang/p4per#7</a> (2026-05-30) - First draft.</li>
+<li><a href="https://github.com/p4lang/p4per/pull/7">p4lang/p4per#7</a> (merged 2026-05-30) - First draft.</li>
 </ul>
 </li>
 </ul>
@@ -608,54 +608,57 @@
 <hr />
 <h2 id="what-is-a-p4per">What is a P4PER?</h2>
 <p>P4PER stands for P4 Project Enhancement Request. A P4PER is a design document providing information to the P4 community, or describing a new feature for P4 or its processes or environment. The P4PER should provide a concise technical specification of the feature and a rationale for the feature. The P4PER author is responsible for building consensus within the community and documenting dissenting opinions.</p>
-<p>For now (as of May 2026), P4PER is opt-in rather than mandatory: use it when it helps with presentation, discussion, coordination, or record-keeping. We may revisit this once the community has more experience with the process.</p>
-<h2 id="p4per-number">P4PER number</h2>
-<p>A P4PER is uniquely identified by a number. To refer to a P4PER, use the format P4PER#N where N is the P4PER number. For example, this P4PER is P4PER#4.</p>
-<p>For how to get the P4PER number, see the <a href="#p4per-submission">P4PER submission</a> section.</p>
+<p>For now (as of May 2026), P4PER is opt-in rather than mandatory: feel free to use it when it helps with presenting, discussing, or coordinating your proposal. We may revisit this once the community has more experience with the process. If it works well, we envision the P4PER process becoming the primary mechanism for proposing major new features, collecting community input, and documenting the design decisions shaping P4. This is similar to the role that <a href="https://peps.python.org/">PEPs</a> have played in the Python community.</p>
 <h2 id="p4per-types">P4PER types</h2>
 <p>There are three types of P4PER:</p>
 <ol>
-<li>A <strong>Technical</strong> P4PER describes a new feature or implementation for P4. It may also describe any technical design broadly related to P4. Once accepted, implementations of the described feature are expected to conform to it.</li>
-<li>An <strong>Informational</strong> P4PER describes a P4 design issue, or provides general guidelines or information to the P4 community, but does not propose a new feature. Informational P4PERs do not necessarily represent a P4 community consensus or recommendation, so users and implementers are free to ignore Informational P4PERs or follow their advice.</li>
+<li>A <strong>Technical</strong> P4PER describes a new feature or implementation for P4. It may also describe any technical design broadly related to P4. Once accepted, implementations of the described feature are expected to conform to the P4PER.</li>
+<li>An <strong>Informational</strong> P4PER describes a P4 design issue, or provides general guidelines or information to the P4 community, but does not propose a new feature. Informational P4PERs do not necessarily represent a P4 community consensus or recommendation, so users and implementers are free to ignore them or follow their advice.</li>
 <li>A <strong>Process</strong> P4PER describes a process surrounding P4, or proposes a change to (or an event in) a process. Process P4PERs are like Technical P4PERs but apply to non-technical areas. They often require community consensus. Unlike Informational P4PERs, they are more than recommendations, and users are typically not free to ignore them.</li>
 </ol>
+<h2 id="p4per-number">P4PER number</h2>
+<p>A P4PER is uniquely identified by a number N assigned during <a href="#p4per-lifecycle">submission</a>. To refer to a P4PER, use the format P4PER#N. For example, this P4PER is P4PER#4.</p>
+<h2 id="p4per-governance">P4PER governance</h2>
+<p>The current <a href="https://p4.org/governance/">P4 Technical Steering Team (TST)</a> administers the P4PER process, including keeping this document up to date, and is its final authority. Reach out to them for anything unclear in practice.</p>
 <h2 id="p4per-workflow">P4PER workflow</h2>
-<h3 id="p4-technical-steering-team">P4 Technical Steering Team</h3>
-<p>The current members of the <a href="https://p4.org/governance/">P4 Technical Steering Team (TST)</a> are responsible for administering the P4PER process, including keeping this document up to date. For anything unclear in practice, reach out to the P4 TST as the final authority.</p>
 <h3 id="p4per-roles">P4PER roles</h3>
 <p>The following roles are involved:</p>
 <ul>
-<li><strong>Author</strong>: One or more authors of the P4PER document.</li>
-<li><strong>Champion</strong>: One of the authors, responsible for coordinating all work related to a P4PER and getting them done. The creator of a <a href="#p4per-submission">P4PER tracking issue</a> becomes that P4PER's champion automatically.</li>
-<li><strong>Editor</strong>: Eligible individuals responsible for managing the administrative (e.g. identifying an appropriate approver) and editorial (e.g. spelling, formatting) aspects of the P4PER workflow. Editors don't pass judgement on whether a P4PER should be accepted. Editors can overlap with authors.</li>
+<li><strong>Author</strong>: The individual(s) who write the P4PER document.</li>
+<li><strong>Champion</strong>: One of the authors, responsible for coordinating all work related to a P4PER and getting it done. The creator of a <a href="#p4per-lifecycle">P4PER tracking issue</a> becomes that P4PER's champion automatically.</li>
+<li><strong>Editor</strong>: Eligible individuals responsible for managing the administrative (e.g. identifying an appropriate approver) and editorial (e.g. spelling, formatting) aspects of the P4PER workflow. Editors don't pass judgment on whether a P4PER should be accepted. Editors can overlap with authors.</li>
 <li><strong>Approver</strong>: Eligible individuals responsible for making the decision on whether a P4PER should be accepted or not, on behalf of the P4 community. Approvers cannot overlap with authors, but can overlap with editors.</li>
 </ul>
 <p>The following individuals are eligible editors and approvers:</p>
 <ul>
-<li>Current P4 TST members.</li>
+<li>Current <a href="#p4per-governance">P4 TST</a> members.</li>
 <li>Current <a href="https://p4.org/working-groups/">P4 Working Groups (WG)</a> chairs.</li>
 <li>Any other individuals appointed by P4 TST members or P4 WG chairs for a specific P4PER.</li>
 </ul>
 <h3 id="p4per-status">P4PER status</h3>
 <ul>
-<li><strong>Draft</strong>: The P4PER is committed to the repo for public review with an editor's approval, but is not yet accepted.</li>
-<li><strong>Accepted</strong>: The P4PER is accepted with approver approval, but the implementation is not fully complete.</li>
-<li><strong>Final</strong>: The P4PER is accepted with approver approval, and the implementation is fully complete.</li>
-<li><strong>Rejected</strong>: The P4PER is rejected after approver's review.<ul>
-<li>We want to keep rejected P4PERs as historical record.</li>
+<li><strong>Draft</strong>: The P4PER has editor approval and is merged to the repo for public review, but is <strong>not yet accepted</strong>.</li>
+<li><strong>Accepted</strong>: The P4PER is <strong>accepted</strong> with approver approval, but related work is <strong>not fully complete</strong>.<ul>
+<li>Related work is defined by the specific P4PER. For <strong>Technical</strong> P4PERs, it typically includes implementation of the proposed feature.</li>
+<li>If there is no related work, skip Accepted and go directly to Final.</li>
 </ul>
 </li>
-<li><strong>Withdrawn</strong>: The P4PER author(s) have withdrawn the proposed P4PER.<ul>
-<li>We want to keep withdrawn P4PERs as historical record.</li>
-<li>A withdrawn P4PER can be resurrected as a new P4PER (with a different P4PER number) later.</li>
+<li><strong>Final</strong>: The P4PER is <strong>accepted</strong> with approver approval, and all related work is <strong>fully complete</strong>.</li>
+<li><strong>Rejected</strong>: The P4PER is <strong>rejected</strong> after approver review.<ul>
+<li>Rejected P4PERs are kept in the repo as historical records.</li>
 </ul>
 </li>
-<li><strong>Active</strong>: The P4PER is a continuously updated living document, and accepted with approver approval.<ul>
-<li>An Active P4PER can transition to Final, if it's no longer expected to be a living document.</li>
+<li><strong>Withdrawn</strong>: The P4PER is <strong>withdrawn</strong> by its author(s).<ul>
+<li>Withdrawn P4PERs are kept in the repo as historical records.</li>
+</ul>
+</li>
+<li><strong>Active</strong>: The P4PER is a continuously updated living document, <strong>accepted</strong> with approver approval and kept <strong>up to date</strong>.<ul>
+<li>An Active P4PER can transition to Final if it's no longer expected to be a living document.</li>
+<li>Only <strong>Informational</strong> and <strong>Process</strong> P4PERs can be living documents.</li>
 </ul>
 </li>
 </ul>
-<p>Typical P4PER status progressions are illustrated below. In practice, it can be more flexible. For example, it's totally fine to submit a Final P4PER in a single PR. When in doubt, just <a href="#p4per-submission">send the PR</a>, and we'll sort things out in the review process.</p>
+<p>The diagram below illustrates typical status progressions, but is not exhaustive: other transitions might be valid (e.g., Accepted → Rejected), and a single PR may cover multiple transitions (e.g., a P4PER going directly to Final). When in doubt, just <a href="#p4per-lifecycle">send a PR</a>, and we'll sort things out in review.</p>
 <pre class="mermaid"><code>flowchart LR
     Draft --&gt; Accepted
     Accepted --&gt; Final
@@ -663,27 +666,30 @@
     Draft --&gt; Withdrawn
     Draft --&gt; Active
     Active -.-&gt; Final</code></pre>
-<h3 id="p4per-submission">P4PER submission</h3>
+<h3 id="p4per-lifecycle">P4PER lifecycle</h3>
 <ol>
 <li><strong>Create a tracking issue for the P4PER</strong><ul>
-<li>The P4PER champion opens an issue in the <a href="https://github.com/p4lang/p4per">P4PER GitHub repo</a>.<ul>
+<li>An author opens an issue in the <a href="https://github.com/p4lang/p4per">P4PER GitHub repo</a> and becomes the P4PER champion.<ul>
 <li>Example: <a href="https://github.com/p4lang/p4per/issues/4">https://github.com/p4lang/p4per/issues/4</a></li>
 </ul>
 </li>
 <li>The issue number becomes the <a href="#p4per-number">P4PER number</a>.</li>
 <li>Request that an <a href="#p4per-roles">editor</a> be assigned for this P4PER.</li>
-<li>Cross-link this issue with any related PRs or issues.</li>
-<li>General discussion about this P4PER can happen in this issue.</li>
+<li>This issue is the coordination hub for all related work. Cross-link it with related PRs and issues.</li>
 </ul>
 </li>
-<li><strong>Create/update/implement the P4PER with PRs</strong><ul>
-<li>The P4PER champion is responsible for creating PRs to create/update the P4PER, and follow through the review process to get the PRs merged.<ul>
+<li><strong>Create and update the P4PER via PRs</strong><ul>
+<li>The P4PER champion is responsible for opening PRs to create or update the P4PER, and following them through review until they are merged.<ul>
 <li>Example: <a href="https://github.com/p4lang/p4per/pull/7">https://github.com/p4lang/p4per/pull/7</a></li>
-<li>If the PR leaves the P4PER in Draft status, simply ask the editor to review this PR. A single editor's approval is sufficient for merging.</li>
-<li>If the PR moves the P4PER beyond Draft status, ask the editor to assign one or more <a href="#p4per-roles">approvers</a> to review this PR. All approvers' approvals are required for merging.</li>
+<li>If the PR keeps the P4PER in Draft, or moves it to Withdrawn, ask the editor to review the PR. A single editor's approval is sufficient for merging.</li>
+<li>If the PR moves the P4PER to Accepted, Final, or Active, ask the editor to assign one or more <a href="#p4per-roles">approvers</a> to review the PR. Approval from all assigned approvers is required for merging. If approvers reject the P4PER during review, update the PR to mark it as Rejected.</li>
 </ul>
 </li>
-<li>If this P4PER requires implementation, the P4PER authors are responsible for coordinating the implementation with PRs in the relevant project repos (e.g. <a href="https://github.com/p4lang/p4c">P4C</a>, <a href="https://github.com/p4lang/p4runtime">P4Runtime</a>).</li>
+</ul>
+</li>
+<li><strong>Complete any related work</strong><ul>
+<li>Related work is defined by the specific P4PER (see <a href="#p4per-status">P4PER status</a>). For <strong>Technical</strong> P4PERs, it typically includes implementation in the relevant project repos (e.g. <a href="https://github.com/p4lang/p4c">P4C</a>, <a href="https://github.com/p4lang/p4runtime">P4Runtime</a>). The P4PER champion coordinates this work.</li>
+<li>Once all related work is complete, send a PR to move the P4PER to Final.</li>
 </ul>
 </li>
 </ol>
@@ -693,7 +699,7 @@
 <li><a href="https://peps.python.org/pep-0001/">Python's PEP 1</a></li>
 <li><a href="https://eips.ethereum.org/EIPS/eip-1">Ethereum's EIP-1</a></li>
 </ul>
-<p>See also other community proposal processes that readers may find useful as additional prior art:</p>
+<p>See also other community proposal processes that we have learned from:</p>
 <ul>
 <li><a href="https://www.rfc-editor.org/">IETF RFCs</a></li>
 <li><a href="https://github.com/rust-lang/rfcs">Rust RFCs</a></li>
