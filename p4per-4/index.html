@@ -1,0 +1,769 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="P4 Project Enhancement Request">
+      
+      
+      
+        <link rel="canonical" href="https://p4lang.github.io/p4per/p4per-4/">
+      
+      
+        <link rel="prev" href="./..">
+      
+      
+        <link rel="next" href="../p4per-1234/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.43">
+    
+    
+      
+        <title>P4PER#4 - P4PER</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.fba56155.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#p4per4-p4per-purpose-and-guidelines" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./.." title="P4PER" class="md-header__button md-logo" aria-label="P4PER" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            P4PER
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              P4PER#4
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/p4lang/p4per" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    p4lang/p4per
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./.." title="P4PER" class="md-nav__button md-logo" aria-label="P4PER" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    P4PER
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/p4lang/p4per" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    p4lang/p4per
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  P4PER
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  P4PER#4
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  P4PER#4
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-p4per" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        What is a P4PER?
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p4per-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        P4PER types
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p4per-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        P4PER number
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p4per-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        P4PER governance
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p4per-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        P4PER workflow
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="P4PER workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#p4per-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        P4PER roles
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p4per-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        P4PER status
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p4per-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        P4PER lifecycle
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prior-art" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Prior art
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p4per-1234/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  P4PER#1234
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-p4per" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        What is a P4PER?
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p4per-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        P4PER types
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p4per-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        P4PER number
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p4per-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        P4PER governance
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p4per-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        P4PER workflow
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="P4PER workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#p4per-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        P4PER roles
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p4per-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        P4PER status
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p4per-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        P4PER lifecycle
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prior-art" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Prior art
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+  
+
+
+<h1 id="p4per4-p4per-purpose-and-guidelines">P4PER#4 - P4PER Purpose and Guidelines</h1>
+<hr />
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li><strong>Author</strong>:
+    Bili Dong (<a href="https://github.com/qobilidop">@qobilidop</a>),
+    Fabian Ruffy (<a href="https://github.com/fruffy">@fruffy</a>),
+    Steffen Smolka (<a href="https://github.com/smolkaj">@smolkaj</a>),
+    Andy Fingerhut (<a href="https://github.com/jafingerhut">@jafingerhut</a>)</li>
+<li><strong>Tracking issue</strong>: <a href="https://github.com/p4lang/p4per/issues/4">p4lang/p4per#4</a> (created 2026-04-12)</li>
+<li><strong>Type</strong>: Process</li>
+<li><strong>Status</strong>: Draft</li>
+<li><strong>Changelog</strong><ul>
+<li><a href="https://github.com/p4lang/p4per/pull/7">p4lang/p4per#7</a> (merged 2026-05-30) - First draft.</li>
+</ul>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="what-is-a-p4per">What is a P4PER?</h2>
+<p>P4PER stands for P4 Project Enhancement Request. A P4PER is a design document providing information to the P4 community, or describing a new feature for P4 or its processes or environment. The P4PER should provide a concise technical specification of the feature and a rationale for the feature. The P4PER author is responsible for building consensus within the community and documenting dissenting opinions.</p>
+<p>For now (as of May 2026), P4PER is opt-in rather than mandatory: feel free to use it when it helps with presenting, discussing, or coordinating your proposal. We may revisit this once the community has more experience with the process. If it works well, we envision the P4PER process becoming the primary mechanism for proposing major new features, collecting community input, and documenting the design decisions shaping P4. This is similar to the role that <a href="https://peps.python.org/">PEPs</a> have played in the Python community.</p>
+<h2 id="p4per-types">P4PER types</h2>
+<p>There are three types of P4PER:</p>
+<ol>
+<li>A <strong>Technical</strong> P4PER describes a new feature or implementation for P4. It may also describe any technical design broadly related to P4. Once accepted, implementations of the described feature are expected to conform to the P4PER.</li>
+<li>An <strong>Informational</strong> P4PER describes a P4 design issue, or provides general guidelines or information to the P4 community, but does not propose a new feature. Informational P4PERs do not necessarily represent a P4 community consensus or recommendation, so users and implementers are free to ignore them or follow their advice.</li>
+<li>A <strong>Process</strong> P4PER describes a process surrounding P4, or proposes a change to (or an event in) a process. Process P4PERs are like Technical P4PERs but apply to non-technical areas. They often require community consensus. Unlike Informational P4PERs, they are more than recommendations, and users are typically not free to ignore them.</li>
+</ol>
+<h2 id="p4per-number">P4PER number</h2>
+<p>A P4PER is uniquely identified by a number N assigned during <a href="#p4per-lifecycle">submission</a>. To refer to a P4PER, use the format P4PER#N. For example, this P4PER is P4PER#4.</p>
+<h2 id="p4per-governance">P4PER governance</h2>
+<p>The current <a href="https://p4.org/governance/">P4 Technical Steering Team (TST)</a> administers the P4PER process, including keeping this document up to date, and is its final authority. Reach out to them for anything unclear in practice.</p>
+<h2 id="p4per-workflow">P4PER workflow</h2>
+<h3 id="p4per-roles">P4PER roles</h3>
+<p>The following roles are involved:</p>
+<ul>
+<li><strong>Author</strong>: The individual(s) who write the P4PER document.</li>
+<li><strong>Champion</strong>: One of the authors, responsible for coordinating all work related to a P4PER and getting it done. The creator of a <a href="#p4per-lifecycle">P4PER tracking issue</a> becomes that P4PER's champion automatically.</li>
+<li><strong>Editor</strong>: Eligible individuals responsible for managing the administrative (e.g. identifying an appropriate approver) and editorial (e.g. spelling, formatting) aspects of the P4PER workflow. Editors don't pass judgment on whether a P4PER should be accepted. Editors can overlap with authors.</li>
+<li><strong>Approver</strong>: Eligible individuals responsible for making the decision on whether a P4PER should be accepted or not, on behalf of the P4 community. Approvers cannot overlap with authors, but can overlap with editors.</li>
+</ul>
+<p>The following individuals are eligible editors and approvers:</p>
+<ul>
+<li>Current <a href="#p4per-governance">P4 TST</a> members.</li>
+<li>Current <a href="https://p4.org/working-groups/">P4 Working Groups (WG)</a> chairs.</li>
+<li>Any other individuals appointed by P4 TST members or P4 WG chairs for a specific P4PER.</li>
+</ul>
+<h3 id="p4per-status">P4PER status</h3>
+<ul>
+<li><strong>Draft</strong>: The P4PER has editor approval and is merged to the repo for public review, but is <strong>not yet accepted</strong>.</li>
+<li><strong>Accepted</strong>: The P4PER is <strong>accepted</strong> with approver approval, but related work is <strong>not fully complete</strong>.<ul>
+<li>Related work is defined by the specific P4PER. For <strong>Technical</strong> P4PERs, it typically includes implementation of the proposed feature.</li>
+<li>If there is no related work, skip Accepted and go directly to Final.</li>
+</ul>
+</li>
+<li><strong>Final</strong>: The P4PER is <strong>accepted</strong> with approver approval, and all related work is <strong>fully complete</strong>.</li>
+<li><strong>Rejected</strong>: The P4PER is <strong>rejected</strong> after approver review.<ul>
+<li>Rejected P4PERs are kept in the repo as historical records.</li>
+</ul>
+</li>
+<li><strong>Withdrawn</strong>: The P4PER is <strong>withdrawn</strong> by its author(s).<ul>
+<li>Withdrawn P4PERs are kept in the repo as historical records.</li>
+</ul>
+</li>
+<li><strong>Active</strong>: The P4PER is a continuously updated living document, <strong>accepted</strong> with approver approval and kept <strong>up to date</strong>.<ul>
+<li>An Active P4PER can transition to Final if it's no longer expected to be a living document.</li>
+<li>Only <strong>Informational</strong> and <strong>Process</strong> P4PERs can be living documents.</li>
+</ul>
+</li>
+</ul>
+<p>The diagram below illustrates typical status progressions, but is not exhaustive: other transitions might be valid (e.g., Accepted → Rejected), and a single PR may cover multiple transitions (e.g., a P4PER going directly to Final). When in doubt, just <a href="#p4per-lifecycle">send a PR</a>, and we'll sort things out in review.</p>
+<pre class="mermaid"><code>flowchart LR
+    Draft --&gt; Accepted
+    Accepted --&gt; Final
+    Draft --&gt; Rejected
+    Draft --&gt; Withdrawn
+    Draft --&gt; Active
+    Active -.-&gt; Final</code></pre>
+<h3 id="p4per-lifecycle">P4PER lifecycle</h3>
+<ol>
+<li><strong>Create a tracking issue for the P4PER</strong><ul>
+<li>An author opens an issue in the <a href="https://github.com/p4lang/p4per">P4PER GitHub repo</a> and becomes the P4PER champion.<ul>
+<li>Example: <a href="https://github.com/p4lang/p4per/issues/4">https://github.com/p4lang/p4per/issues/4</a></li>
+</ul>
+</li>
+<li>The issue number becomes the <a href="#p4per-number">P4PER number</a>.</li>
+<li>Request that an <a href="#p4per-roles">editor</a> be assigned for this P4PER.</li>
+<li>This issue is the coordination hub for all related work. Cross-link it with related PRs and issues.</li>
+</ul>
+</li>
+<li><strong>Create and update the P4PER via PRs</strong><ul>
+<li>The P4PER champion is responsible for opening PRs to create or update the P4PER, and following them through review until they are merged.<ul>
+<li>Example: <a href="https://github.com/p4lang/p4per/pull/7">https://github.com/p4lang/p4per/pull/7</a></li>
+<li>If the PR keeps the P4PER in Draft, or moves it to Withdrawn, ask the editor to review the PR. A single editor's approval is sufficient for merging.</li>
+<li>If the PR moves the P4PER to Accepted, Final, or Active, ask the editor to assign one or more <a href="#p4per-roles">approvers</a> to review the PR. Approval from all assigned approvers is required for merging. If approvers reject the P4PER during review, update the PR to mark it as Rejected.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Complete any related work</strong><ul>
+<li>Related work is defined by the specific P4PER (see <a href="#p4per-status">P4PER status</a>). For <strong>Technical</strong> P4PERs, it typically includes implementation in the relevant project repos (e.g. <a href="https://github.com/p4lang/p4c">P4C</a>, <a href="https://github.com/p4lang/p4runtime">P4Runtime</a>). The P4PER champion coordinates this work.</li>
+<li>Once all related work is complete, send a PR to move the P4PER to Final.</li>
+</ul>
+</li>
+</ol>
+<h2 id="prior-art">Prior art</h2>
+<p>The P4PER process was directly inspired by <a href="https://peps.python.org/">Python Enhancement Proposals (PEPs)</a>. The writing of this document drew heavily from the following meta documents that play the same role in their respective communities:</p>
+<ul>
+<li><a href="https://peps.python.org/pep-0001/">Python's PEP 1</a></li>
+<li><a href="https://eips.ethereum.org/EIPS/eip-1">Ethereum's EIP-1</a></li>
+</ul>
+<p>See also other community proposal processes that we have learned from:</p>
+<ul>
+<li><a href="https://www.rfc-editor.org/">IETF RFCs</a></li>
+<li><a href="https://github.com/rust-lang/rfcs">Rust RFCs</a></li>
+<li><a href="https://github.com/kubernetes/enhancements">Kubernetes KEPs</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":[],"search":"../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6e5f0216.min.js"></script>
+      
+    
+  </body>
+</html>
